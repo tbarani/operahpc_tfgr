@@ -6,11 +6,11 @@
  *
  * Reference
  * ---------
- * L. Van Brutzel & A. Castelier, "Atomistic modelling of fission gas
- *   clustering in UO2", J. Nucl. Mater. 352 (2006) 93–110.
- *   https://doi.org/10.1016/j.jnucmat.2006.02.051
+ * L. Van Brutzel, E. Castelier, "Equation of state for helium-xenon gas
+ *   mixture studied by molecular dynamics simulations", J. Nucl. Mater.
+ *   586 (2023) 154654. https://doi.org/10.1016/j.jnucmat.2023.154654
  *
- * The original Van Brutzel–Castelier EOS couples an ideal-gas term to a
+ * The Van Brutzel–Castelier EOS couples an ideal-gas term to a
  * Young–Laplace surface-tension contribution:
  *
  *       P(T, ρ, r) = P_ideal(T, ρ) + P_surface(r)

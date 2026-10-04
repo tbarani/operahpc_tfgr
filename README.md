@@ -100,8 +100,9 @@ LGPL v3 — see [LICENSE](LICENSE).
   based on MMM calculations*, OperaHPC WP6 (2026).
 - B. Michel, T. Barani, I. Ramière — *Fission gas release and fuel fragmentation in
   HBS microstructure during a LOCA in a VVER*, OperaHPC WP7.3 (2026).
-- L. Van Brutzel, A. Castelier — *Atomistic modelling of fission gas clustering in
-  UO₂*, J. Nucl. Mater. **352** (2006) 93–110.
+- L. Van Brutzel, E. Castelier — *Equation of state for helium-xenon gas
+  mixture studied by molecular dynamics simulations*, J. Nucl. Mater.
+  **586** (2023) 154654. https://doi.org/10.1016/j.jnucmat.2023.154654
 
 ## For AI coding agents
 
