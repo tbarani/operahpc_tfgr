@@ -13,6 +13,16 @@ struct Config {
     double      porosity;
     double      radius_um;
     std::string nn_model_path;
+
+    // LOCA-driver extension (T73): all four are optional.  When all are
+    // set Main.cxx uses the multi-slice runLocaDriver flow; otherwise the
+    // historical CSV-driven path is used.  `fa_number` is the fuel assembly
+    // selector (e.g. "_00415") and the three paths point at the GALILEE /
+    // RELAP5 data files for that assembly.
+    std::string fa_number;
+    std::string fr_input;
+    std::string rad_fg;
+    std::string relap_plot;
 };
 
 /**

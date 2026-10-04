@@ -41,9 +41,16 @@ add_executable(tfgr
     src/InputReader.cxx
     src/DelauneyModel.cxx
     src/ResultsWriter.cxx
+    src/FRInput.cxx
+    src/PowerHistory.cxx
+    src/RadFG.cxx
+    src/RelapPlot.cxx
+    src/Eos.cxx
+    src/Microstructure.cxx
+    src/Driver.cxx
+    src/NNModel.cxx
+    src/Validator.cxx
 )
-
-#    src/NNModel.cxx
 
 target_include_directories(tfgr PRIVATE include)
 
@@ -83,6 +90,20 @@ set(CPACK_PACKAGE_NAME    "tfgr")
 set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
 set(CPACK_GENERATOR       "TGZ;ZIP")
 include(CPack)
+
+# ── Tests (Jernkvist validation harness) ──────────────────────────────────────
+enable_testing()
+add_executable(test_validator
+    tests/test_validator.cxx
+    src/Validator.cxx
+)
+target_include_directories(test_validator PRIVATE include)
+target_compile_options(test_validator PRIVATE
+    $<$<CXX_COMPILER_ID:GNU,Clang,AppleClang>:
+        -Wall -Wextra -Wpedantic -Wconversion -Wshadow>
+    $<$<CXX_COMPILER_ID:MSVC>:/W4>
+)
+add_test(NAME validator_smoke COMMAND test_validator)
 
 # ── Build summary ─────────────────────────────────────────────────────────────
 message(STATUS "──────────────────────────────────────────────────")

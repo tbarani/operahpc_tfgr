@@ -39,3 +39,9 @@
 
 # debug information files
 *.dwo
+
+# Build directory (cmake -B build)
+build/
+
+# MS-13 input data (not part of the source; large and CEA-private)
+data/

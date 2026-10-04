@@ -35,7 +35,7 @@ Config parseConfig(const std::string& filename){
 
         if (key == "model") {
             if (value != "Delauney" && value != "NN"){
-                std::cout << 
+                std::cout <<
                     "Unknown model: \"" + value
                     + "\". Expected 'Delauney' or 'NN'.\n";
                 exit(1);
@@ -52,8 +52,17 @@ Config parseConfig(const std::string& filename){
         } else if (key == "radius") {
             cfg.radius_um = std::stod(value);
             has_radius = true;
-        } else if (key == "nn_model")
+        } else if (key == "nn_model") {
             cfg.nn_model_path = value;
+        } else if (key == "fa_number") {
+            cfg.fa_number = value;
+        } else if (key == "fr_input") {
+            cfg.fr_input = value;
+        } else if (key == "rad_fg") {
+            cfg.rad_fg = value;
+        } else if (key == "relap_plot") {
+            cfg.relap_plot = value;
+        }
     }
 
     if (!has_model){
